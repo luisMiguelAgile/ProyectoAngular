@@ -1,0 +1,35 @@
+<div class="card card-body bg-light">
+    <a routerLink="/lugares">Lugares</a> / Crear lugar
+</div>
+<br>
+<div class="container" style="background-color:blanchedalmond" >
+    <div class="row" >
+
+        <div class="col-md-7" >
+            <label>Nombre</label>
+            <input type="text" class="form-control" [(ngModel)]="lugar.nombre">
+            <br>
+            <label>Distancia</label>
+            <input type="number" class="form-control" [(ngModel)]="lugar.distancia">
+            <br>
+            <label>Cercania</label>
+            <input type="number" class="form-control" [(ngModel)]="lugar.cercania">
+            <br>
+            <label>Descripcion</label>
+            <textarea class="form-control" [(ngModel)]="lugar.descripcion"></textarea>
+            <br>
+            <label>Plan</label>
+            <input type="text" class="form-control" [(ngModel)]="lugar.plan">
+            <hr>
+            <a class="btn btn-primary" (click)="guardarLugar()">Enviar</a>
+            <a class="btn btn-default" routerLink="/lugares/1">Cancelar</a>
+        </div>
+        <div class="col-md-5">
+            <h1>Imagen</h1>
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="././assets/breakbeats-_0009_Layer_7.jpg" alt="Card image cap">
+            </div>
+        </div>
+    </div>
+
+</div>
