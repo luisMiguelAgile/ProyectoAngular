@@ -8,13 +8,20 @@ import { LugaresService } from '../services/lugares.service';
 })
 export class CrearComponent {
   lugar: any = [];
-  constructor(private lugaresService: LugaresService ){
+  constructor(private lugaresService: LugaresService) {
 
   }
-  guardarLugar(){
-    this.lugar.id= Date.now();
-    this.lugaresService.guardarLugar(this.lugar)
+  guardarLugar() {
+    var direccion = this.lugar.calle + ',' + this.lugar.ciudad + ',' + this.lugar.pais
+    this.lugaresService.obtenerGeoData(direccion)
+      .subscribe((result) => {
+        debugger;
+        this.lugar.lat = 0;
+        this.lugar.lng = 0;
+        this.lugar.id = Date.now();
+        this.lugaresService.guardarLugar(this.lugar);
+        alert("negocio creado");
+        this.lugar = {};
+      });
   }
-
-
 }

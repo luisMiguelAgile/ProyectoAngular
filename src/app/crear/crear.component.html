@@ -2,10 +2,10 @@
     <a routerLink="/lugares">Lugares</a> / Crear lugar
 </div>
 <br>
-<div class="container" style="background-color:blanchedalmond" >
-    <div class="row" >
+<div class="container" style="background-color:blanchedalmond">
+    <div class="row">
 
-        <div class="col-md-7" >
+        <div class="col-md-7">
             <label>Nombre</label>
             <input type="text" class="form-control" [(ngModel)]="lugar.nombre">
             <br>
@@ -20,9 +20,21 @@
             <br>
             <label>Plan</label>
             <input type="text" class="form-control" [(ngModel)]="lugar.plan">
+            <h3>Datos de direccion</h3>
+            <label>Calle y numero</label>
+            <input type="text" class="form-control" [(ngModel)]="lugar.calle">
+
+            <br>
+            <label>ciudad</label>
+            <input type="text" class="form-control" [(ngModel)]="lugar.ciudad">
+
+            <br>
+            <label>pais</label>
+            <input type="text" class="form-control" [(ngModel)]="lugar.pais">
+
             <hr>
             <a class="btn btn-primary" (click)="guardarLugar()">Enviar</a>
-            <a class="btn btn-default" routerLink="/lugares/1">Cancelar</a>
+            <a class="btn btn-default" routerLink="/lugares">Cancelar</a>
         </div>
         <div class="col-md-5">
             <h1>Imagen</h1>

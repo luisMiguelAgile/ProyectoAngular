@@ -15,6 +15,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { LugaresService } from './services/lugares.service';
 import { CrearComponent } from './crear/crear.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
   {path:'', component: LugaresComponent},
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     }),
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpModule
   ],
   providers: [LugaresService],
   bootstrap: [AppComponent]
