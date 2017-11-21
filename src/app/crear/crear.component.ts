@@ -11,6 +11,8 @@ export class CrearComponent {
   constructor(private lugaresService: LugaresService) {
 
   }
+
+  
   guardarLugar() {
     var direccion = this.lugar.calle + ',' + this.lugar.ciudad + ',' + this.lugar.pais
     this.lugaresService.obtenerGeoData(direccion)
